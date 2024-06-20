@@ -1,0 +1,30 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ mymember.name }}
+{% endblock %}
+
+
+{% block content %}
+  <h1>{{ mymember.name }}</h1>
+  <p>Employee Id: {{ mymember.employee_id }}</p>
+  <p>Phone: {{ mymember.phone_number }}</p>
+  <p>Job Title: {{ mymember.role }}</p>
+  <p>Email: {{ mymember.email }}</p>
+  <p>Date of Birth: {{ mymember.dob }}</p>
+  <p>Joining Date: {{ mymember.joining_date }}</p>
+  <p>Team: {{ mymember.team }}</p>
+  <p>Reporting Manager: {{ mymember.reporting_manager }}</p>
+  <p>Assigned Assets: {{ mymember.assigned_assets }}</p>
+  <p>Allocated Tools: {{ mymember.allocated_tools }}</p>
+  <p>Timeline: {{ mymember.timeline }}</p>
+  <p>Address: {{ mymember.address }}</p>
+  <p>Location: {{ mymember.location }}</p>
+  <p>Department: {{ mymember.department }}</p>
+  
+  <a href="../">logout</a>
+  <a href="{% url 'employee_update' mymember.pk %}">Edit</a>
+  
+  
+  
+{% endblock %}
